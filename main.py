@@ -44,7 +44,7 @@ class HauntingMaze:
             elif image_file == "assets/images/door.png":
                 new_height = self.pixel * 4
             else:
-                new_height = self.pixel * 2.5  # 16 * 3
+                new_height = self.pixel * 2  # 16 * 3
             
             
             aspect_ratio = orig_w / orig_h
@@ -282,7 +282,7 @@ class HauntingMaze:
         for coin in self.coins:
             self.screen.blit(self.coin, coin.topleft)
         
-        if True:    #to enable fog of war
+        if False:    #to enable fog of war
             pygame.draw.rect(self.screen, (0,0,0), self.west_fog)
             pygame.draw.rect(self.screen, (0,0,0), self.north_fog)
             pygame.draw.rect(self.screen, (0,0,0), self.south_fog)
